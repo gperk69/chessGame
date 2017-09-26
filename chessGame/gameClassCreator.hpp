@@ -11,13 +11,12 @@
 
 #include <stdio.h>
 
-class game
+struct game
 {
-private:
-    
-public:
+    char getChoice();
+    void processChoice(char);
+    bool picked = false;
     bool white;
-    game(char);
-};
+    };
 
 #endif /* gameClassCreator_hpp */

@@ -7,3 +7,9 @@
 //
 
 #include "pieceClasses.hpp"
+#include <iostream>
+
+piece::piece(char test)
+{
+    std::cout << test;
+}

@@ -7,10 +7,20 @@
 //
 
 #include <iostream>
+#include "pieceClasses.hpp"
+#include "gameClassCreator.hpp"
+
 
 int main()
 {
     game Game;
-    chooseColour();
-    //testing
+    
+    while(Game.picked == false)
+    {
+        char choice = Game.getChoice();
+        Game.processChoice(choice);
+    }
+    std::cout << Game.white;
+    
+    
 }

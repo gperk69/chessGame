@@ -14,41 +14,69 @@
 class piece
 {
 public:
-    
+
+protected:
+
 private:
-    bool onBoard;
-	char x;
-	char y;    
 };
 
 class king: public piece
 {
+public:
     
+protected:
+    
+private:
 };
 
 class queen: public piece
 {
+public:
     
+protected:
+    
+private:
+
 };
 
 class rook: public piece
 {
+public:
     
+protected:
+    
+private:
+
 };
 
 class knight: public piece
 {
+public:
     
+protected:
+    
+private:
+
 };
 
 class bishop: public piece
 {
+public:
     
+protected:
+    
+private:
+
 };
 
 class pawn: public piece
 {
+public:
     
+protected:
+    
+private:
+
 };
 
 #endif /* pieceClasses_hpp */

@@ -7,16 +7,29 @@
 //
 
 #include "gameClassCreator.hpp"
+#include <iostream>
+#include <string>
 
-game::game(char choice)
+
+
+char game::getChoice()
 {
-    if (choice == 'w')
+    std::string choice;
+    std::cout << "B or W?";
+    std::getline(std::cin, choice);
+    return choice[0];
+}
+
+void game::processChoice(char choice)
+{
+    if (choice == 'w' || choice == 'W')
     {
         white = true;
+        picked = true;
     }
-    else
+    else if (choice == 'b' || choice == 'B')
     {
         white = false;
-        
+        picked = true;
     }
 }
