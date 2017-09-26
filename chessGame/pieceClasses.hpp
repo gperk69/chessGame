@@ -13,7 +13,12 @@
 
 class piece
 {
+public:
     
+private:
+    bool onBoard;
+	char x;
+	char y;    
 };
 
 class king: public piece
