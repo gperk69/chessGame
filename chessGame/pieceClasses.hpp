@@ -14,6 +14,7 @@
 class piece
 {
 public:
+    piece(char, char, bool);
 
 protected:
 
