@@ -14,6 +14,8 @@
 struct game
 {
     char getChoice();
+	void setBoard();
+	void drawBoard();
     void processChoice(char);
     bool picked = false;
     bool white;
