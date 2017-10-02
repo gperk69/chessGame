@@ -11,18 +11,32 @@
 
 #include <stdio.h>
 
+//information needed for a game
 struct game
 {
+    char board[8][8] = {};
+    void setBoard();
+    void drawBoard();
+
+    
     char getChoice();
 	void checkLegal();
 	bool check();
 	bool checkmate();
-	bool stalemate()
-	void setBoard();
-	void drawBoard();
+    bool stalemate();
+	
+    
+    
+    
     void processChoice(char);
     bool picked = false;
     bool white;
-    };
+    
+};
+
+
+
+
+
 
 #endif /* gameClassCreator_hpp */

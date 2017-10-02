@@ -6,19 +6,18 @@
 //  Copyright © 2017 George Perkins. All rights reserved.
 //
 
-#include "pieceClasses.hpp"
 #include <iostream>
 
-piece::piece(char x, char y, bool white)
+piece::piece(char x, char y, bool white, piece *p, game *Game)
 {
-	piece.posX = x;
-	piece.posY = y;
+	p->posX = x;
+	p->posY = y;
 	if (white)
 	{
-		board[x][y] = piece.type;
+		Game->board[x][y] = p->type;
 	}
 	else
 	{
-		board[x][y] = piece.type - 31;
+		Game->board[x][y] = p->type - 31;
 	}
 }

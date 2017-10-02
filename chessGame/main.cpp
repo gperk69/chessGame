@@ -1,23 +1,28 @@
-//
-//  main.cpp
-//  chessGame
-//
-//  Created by George Perkins on 24/09/2017.
-//  Copyright © 2017 George Perkins. All rights reserved.
-//
 
 #include <iostream>
 #include "pieceClasses.hpp"
 #include "gameClassCreator.hpp"
 
+static game Game;
+
+//game start script
+void startGame(game* Game)
+{
+    //get choice for white or black
+    while(Game->picked == false)
+    {
+        char choice = Game->getChoice();
+        Game->processChoice(choice);
+    }
+    
+}
+
+
+pawn A();
 
 int main()
 {
-    game Game;
+    //initialise game instance + get choice
     
-    while(Game.picked == false)
-    {
-        char choice = Game.getChoice();
-        Game.processChoice(choice);
-    }
+    startGame(&Game);
 }

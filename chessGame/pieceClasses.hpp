@@ -11,41 +11,36 @@
 
 #include <stdio.h>
 
+
 class piece
 {
 public:
-    piece(char, char, bool);
-	bool onboard = true;
-	char posX;
-	char posY;
+    piece(char ,char ,bool ,piece* ,game* );
+    bool onboard = true;
+    char posX;
+    char posY;
+    char type;
 
 protected:
-
-private:
-};
-
-class king: public piece
-{
-public:
     
-protected:
     
 private:
 };
 
-class queen: public piece
+class king:public piece
 {
 public:
+    using piece::piece;
     
 protected:
     
 private:
-
 };
 
-class rook: public piece
+class queen:public piece
 {
 public:
+    using piece::piece;
     
 protected:
     
@@ -53,9 +48,20 @@ private:
 
 };
 
-class knight: public piece
+class rook:public piece
 {
 public:
+    using piece::piece;
+protected:
+    
+private:
+
+};
+
+class knight:public piece
+{
+public:
+    using piece::piece;
     
 protected:
     
@@ -63,9 +69,10 @@ private:
 
 };
 
-class bishop: public piece
+class bishop:public piece
 {
 public:
+    using piece::piece;
     
 protected:
     
@@ -73,9 +80,10 @@ private:
 
 };
 
-class pawn: public piece
+class pawn:public piece
 {
 public:
+    using piece::piece;
     
 protected:
     
