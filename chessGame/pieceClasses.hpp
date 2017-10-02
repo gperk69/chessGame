@@ -15,6 +15,9 @@ class piece
 {
 public:
     piece(char, char, bool);
+	bool onboard = true;
+	char posX;
+	char posY;
 
 protected:
 
