@@ -14,6 +14,10 @@
 struct game
 {
     char getChoice();
+	void checkLegal();
+	bool check();
+	bool checkmate();
+	bool stalemate()
 	void setBoard();
 	void drawBoard();
     void processChoice(char);

@@ -9,3 +9,16 @@
 #include "pieceClasses.hpp"
 #include <iostream>
 
+piece::piece(char x, char y, bool white)
+{
+	piece.posX = x;
+	piece.posY = y;
+	if (white)
+	{
+		board[x][y] = piece.type;
+	}
+	else
+	{
+		board[x][y] = piece.type - 31;
+	}
+}
