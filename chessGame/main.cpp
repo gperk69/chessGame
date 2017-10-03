@@ -18,8 +18,6 @@ void startGame(game* Game)
 }
 
 
-pawn A();
-
 int main()
 {
     //initialise game instance + get choice
