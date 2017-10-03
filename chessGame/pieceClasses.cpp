@@ -7,17 +7,16 @@
 //
 
 #include <iostream>
+#include "pieceClasses.hpp"
 
-piece::piece(char x, char y, bool white, piece *p, game *Game)
+
+piece::piece(char x, char y, bool white)
 {
-	p->posX = x;
-	p->posY = y;
-	if (white)
-	{
-		Game->board[x][y] = p->type;
-	}
-	else
-	{
-		Game->board[x][y] = p->type - 31;
-	}
+	posX = x;
+	posY = y;
+    if (white == false)
+    {
+        type = 'z';
+        std::cout << "cunt";
+    }
 }

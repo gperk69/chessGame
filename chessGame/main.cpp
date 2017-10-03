@@ -1,26 +1,14 @@
-
 #include <iostream>
-#include "pieceClasses.hpp"
 #include "gameClassCreator.hpp"
+#include "pieceClasses.hpp"
 
-static game Game;
-
-//game start script
-void startGame(game* Game)
-{
-    //get choice for white or black
-    while(Game->picked == false)
-    {
-        char choice = Game->getChoice();
-        Game->processChoice(choice);
-    }
-    
-}
-
+Game game;
+char board[8][8] = {};
 
 int main()
 {
     //initialise game instance + get choice
-    
-    startGame(&Game);
+    game.startGame();
+    game.setBoard();
+    game.drawBoard();
 }

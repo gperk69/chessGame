@@ -15,7 +15,7 @@
 class piece
 {
 public:
-    piece(char ,char ,bool ,piece* ,game* );
+    piece(char,char,bool);
     bool onboard = true;
     char posX;
     char posY;
@@ -31,7 +31,7 @@ class king:public piece
 {
 public:
     using piece::piece;
-    
+    char type = 'K';
 protected:
     
 private:
@@ -41,10 +41,7 @@ class queen:public piece
 {
 public:
     using piece::piece;
-    
-protected:
-    
-private:
+    char type = 'Q';
 
 };
 
@@ -52,6 +49,9 @@ class rook:public piece
 {
 public:
     using piece::piece;
+    char type = 'R';
+
+    
 protected:
     
 private:
@@ -62,7 +62,8 @@ class knight:public piece
 {
 public:
     using piece::piece;
-    
+    char type = 'N';
+
 protected:
     
 private:
@@ -73,6 +74,7 @@ class bishop:public piece
 {
 public:
     using piece::piece;
+    char type = 'B';
     
 protected:
     
@@ -84,6 +86,7 @@ class pawn:public piece
 {
 public:
     using piece::piece;
+    char type = 'P';
     
 protected:
     

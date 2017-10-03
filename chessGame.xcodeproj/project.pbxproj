@@ -64,10 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				6A7EFCDB1F781737007FFF2E /* main.cpp */,
-				6A7EFCE21F781FCD007FFF2E /* gameClassCreator.cpp */,
 				6A7EFCE31F781FCD007FFF2E /* gameClassCreator.hpp */,
-				6A7EFCE61F78238D007FFF2E /* pieceClasses.cpp */,
+				6A7EFCE21F781FCD007FFF2E /* gameClassCreator.cpp */,
 				6A7EFCE71F78238D007FFF2E /* pieceClasses.hpp */,
+				6A7EFCE61F78238D007FFF2E /* pieceClasses.cpp */,
 			);
 			path = chessGame;
 			sourceTree = "<group>";
