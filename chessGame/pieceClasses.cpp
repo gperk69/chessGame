@@ -10,13 +10,9 @@
 #include "pieceClasses.hpp"
 
 
-piece::piece(char x, char y, bool white)
+piece::piece(char x, char y, bool white, char t)
 {
 	posX = x;
 	posY = y;
-    if (white == false)
-    {
-        type = 'z';
-        std::cout << "cunt";
-    }
+    type = t;
 }

@@ -11,4 +11,22 @@ int main()
     game.startGame();
     game.setBoard();
     game.drawBoard();
+    
+    while(game.checkmate || game.stalemate)
+    {
+        //get x co-ordinate
+        std::string getX;
+        std::getline(std::cin,getX);
+        char x = getX[0] - 'a';
+        
+        std::string getY;
+        std::getline(std::cin,getY);
+        char y = getY[0] - '0';
+        
+        
+        //game.getPiece(x,y);
+        game.movePiece(game.WhiteKnights[0],2,4);
+        game.drawBoard();
+
+    }
 }

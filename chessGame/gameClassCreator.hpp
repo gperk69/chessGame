@@ -10,6 +10,15 @@
 //information needed for a game to happen
 struct Game
 {
+    //pre-game function calls to determine colour
+    void processChoice(char);
+    bool picked = false;
+    bool white;
+    
+    //pre-game variable list
+    bool checkmate = false;
+    bool stalemate = false;
+    
     //pre-game function calls to start game note that drawBoard called every time a piece moves
     void startGame();
     char getChoice();
@@ -17,16 +26,13 @@ struct Game
     void drawBoard();
 
     //in-game function calls to ensure moves are allowed and also control game state
+    piece* getPiece(char,char);
     void movePiece(piece*,char,char);
 	void isLegal();
 	bool isCheck();
 	bool isCheckmate();
     bool isStalemate();
 	
-    //pre-game function calls to determine colour
-    void processChoice(char);
-    bool picked = false;
-    bool white;
     
     //white piece definitions note that minor/major pieces have extra space for promotion
     pawn* WhitePawns[8];
