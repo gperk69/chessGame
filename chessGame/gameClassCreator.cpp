@@ -28,6 +28,7 @@ char Game::getChoice()
     return choice[0];
 }
 
+//called once at start of game
 void Game::setBoard()
 {
     //////////////////
@@ -106,8 +107,8 @@ void Game::setBoard()
     //knights
     for (int i = 0; i < 2; i++)
     {
-        BlackBishops[i] = new bishop(1+(5*i),0,false,'n');
-        board[WhiteKnights[i]->posX][BlackBishops[i]->posY] = BlackBishops[i];
+        BlackKnights[i] = new knight(1+(5*i),0,false,'n');
+        board[BlackKnights[i]->posX][BlackKnights[i]->posY] = BlackKnights[i];
     }
     
     //rooks
@@ -119,6 +120,7 @@ void Game::setBoard()
 	
 }
 
+//called every move
 void Game::drawBoard()
 {
     
@@ -130,39 +132,39 @@ void Game::drawBoard()
 
 	for (int i = 0; i < 8; i++)
 	{
-		boardVisuals[WhitePawns[i]->posX][WhitePawns->posY] = WhitePawns->type;
+		boardVisuals[WhitePawns[i]->posX][WhitePawns[i]->posY] = WhitePawns[i]->type;
 	}
 
 	//queen
 
-	for (int i = 0; i < 3; i++)
+	for (int i = 0; i < 1; i++)
 	{
-		boardVisuals[WhitePawns[i]->posX][WhitePawns->posY] = WhitePawns->type;
+		boardVisuals[WhiteQueens[i]->posX][WhiteQueens[i]->posY] = WhiteQueens[i]->type;
 	}
 
 	//king
 
-	WhiteKings[0] = new king(4, 7, true, 'K');
-	board[WhiteKings[0]->posX][WhiteKings[0]->posY] = WhiteKings[0];
+    for (int i = 0; i < 1; i++)
+    {
+        boardVisuals[WhiteKings[i]->posX][WhiteKings[i]->posY] = WhiteKings[i]->type;
+    }
 
 	//bishops
 	for (int i = 0; i < 2; i++)
 	{
-		WhiteBishops[i] = new bishop(2 + (3 * i), 7, true, 'B');
-		board[WhiteBishops[i]->posX][WhiteBishops[i]->posY] = WhiteBishops[i];
+        boardVisuals[WhiteBishops[i]->posX][WhiteBishops[i]->posY] = WhiteBishops[i]->type;
 	}
 	//knights
 	for (int i = 0; i < 2; i++)
 	{
-		WhiteKnights[i] = new knight(1 + (5 * i), 7, true, 'N');
-		board[WhiteKnights[i]->posX][WhiteKnights[i]->posY] = WhiteKnights[i];
+        boardVisuals[WhiteKnights[i]->posX][WhiteKnights[i]->posY] = WhiteKnights[i]->type;
 	}
 
 	//rooks
 	for (int i = 0; i < 2; i++)
 	{
-		WhiteRook[i] = new rook(0 + (7 * i), 7, true, 'R');
-		board[WhiteRook[i]->posX][WhiteRook[i]->posY] = WhiteRook[i];
+        boardVisuals[WhiteRook[i]->posX][WhiteRook[i]->posY] = WhiteRook[i]->type;
+
 	}
 
 
@@ -171,52 +173,47 @@ void Game::drawBoard()
 	///black pieces///
 	//////////////////
 
-	//pawns
-
-	for (int i = 0; i < 8; i++)
-	{
-		BlackPawns[i] = new pawn(i, 1, false, 'p');
-		board[BlackPawns[i]->posX][BlackPawns[i]->posY] = BlackPawns[i];
-
-	}
-
-	//queen
-
-	BlackQueens[0] = new queen(3, 0, false, 'q');
-	board[BlackQueens[0]->posX][BlackQueens[0]->posY] = BlackQueens[0];
-
-	//king
-
-	BlackKings[0] = new king(4, 0, false, 'k');
-	board[BlackKings[0]->posX][BlackKings[0]->posY] = BlackKings[0];
-
-	//bishops
-	for (int i = 0; i < 2; i++)
-	{
-		BlackBishops[i] = new bishop(2 + (3 * i), 0, false, 'b');
-		board[BlackBishops[i]->posX][BlackBishops[i]->posY] = BlackBishops[i];
-	}
-	//knights
-	for (int i = 0; i < 2; i++)
-	{
-		BlackBishops[i] = new bishop(1 + (5 * i), 0, false, 'n');
-		board[WhiteKnights[i]->posX][BlackBishops[i]->posY] = BlackBishops[i];
-	}
-
-	//rooks
-	for (int i = 0; i < 2; i++)
-	{
-		BlackRook[i] = new rook(0 + (7 * i), 0, false, 'r');
-		board[BlackRook[i]->posX][BlackRook[i]->posY] = BlackRook[i];
-	}
-
-
-
-
+    //pawns
+    
+    for (int i = 0; i < 8; i++)
+    {
+        boardVisuals[BlackPawns[i]->posX][BlackPawns[i]->posY] = BlackPawns[i]->type;
+    }
+    
+    //queen
+    
+    for (int i = 0; i < 1; i++)
+    {
+        boardVisuals[BlackQueens[i]->posX][BlackQueens[i]->posY] = BlackQueens[i]->type;
+    }
+    
+    //king
+    
+    for (int i = 0; i < 1; i++)
+    {
+        boardVisuals[BlackKings[i]->posX][BlackKings[i]->posY] = BlackKings[i]->type;
+    }
+    
+    //bishops
+    for (int i = 0; i < 2; i++)
+    {
+        boardVisuals[BlackBishops[i]->posX][BlackBishops[i]->posY] = BlackBishops[i]->type;
+    }
+    //knights
+    for (int i = 0; i < 2; i++)
+    {
+        boardVisuals[BlackKnights[i]->posX][BlackKnights[i]->posY] = BlackKnights[i]->type;
+    }
+    
+    //rooks
+    for (int i = 0; i < 2; i++)
+    {
+        boardVisuals[BlackRook[i]->posX][BlackRook[i]->posY] = BlackRook[i]->type;
+        
+    }
 	
-	
-	
-	
+	// draw board
+    
 	for(int y = 0; y < 8; y++ )
     {
         std::cout << std::endl;

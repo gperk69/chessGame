@@ -17,8 +17,8 @@ class piece
 public:
     piece(char,char,bool,char);
     bool onboard = true;
-    char posX;
-    char posY;
+    char posX = -1;
+    char posY = -1;
     char type;
 
 protected:

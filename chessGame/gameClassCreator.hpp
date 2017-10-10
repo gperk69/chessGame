@@ -36,19 +36,19 @@ struct Game
     
     //white piece definitions note that minor/major pieces have extra space for promotion
     pawn* WhitePawns[8];
-    queen* WhiteQueens[3];
-    king* WhiteKings[3];
-    knight* WhiteKnights[4];
-    bishop* WhiteBishops[4];
-    rook* WhiteRook[4];
+    queen* WhiteQueens[1];
+    king* WhiteKings[1];
+    knight* WhiteKnights[2];
+    bishop* WhiteBishops[2];
+    rook* WhiteRook[2];
 
     //black piece definitions note that minor/major pieces have extra space for promotion
     pawn* BlackPawns[8];
-    queen* BlackQueens[3];
-    king* BlackKings[3];
-    knight* BlackKnights[4];
-    bishop* BlackBishops[4];
-    rook* BlackRook[4];
+    queen* BlackQueens[1];
+    king* BlackKings[1];
+    knight* BlackKnights[2];
+    bishop* BlackBishops[2];
+    rook* BlackRook[2];
 
     
 };

@@ -3,7 +3,7 @@
 #include "pieceClasses.hpp"
 
 Game game;
-char boardDraw[8][8] = {};
+char boardVisuals[8][8] = {};
 piece* board[8][8] = {};
 
 
@@ -14,20 +14,23 @@ int main()
     game.setBoard();
     game.drawBoard();
     
-    while(game.checkmate || game.stalemate)
+    while(!game.checkmate && !game.stalemate)
     {
-        //get x co-ordinate
-        std::string getX;
-        std::getline(std::cin,getX);
-        char x = getX[0] - 'a';
+        //get co-ordinates
+        std::string startCoordinate;
+        std::getline(std::cin,startCoordinate);
+        char x1 = '0' + (startCoordinate[0] - 'a');
+        char y1 = '7' - (startCoordinate[1] - '1');
         
-        std::string getY;
-        std::getline(std::cin,getY);
-        char y = getY[0] - '0';
+        std::string endCoordinate;
+        std::getline(std::cin,endCoordinate);
+        char x2 = '0' + (endCoordinate[0] - 'a');
+        char y2 = '7' - (endCoordinate[1] - '1');
         
         
-        //game.getPiece(x,y);
-        game.movePiece(game.WhiteKnights[0],2,4);
+
+        piece* p = game.getPiece(x1,y1);
+        game.movePiece(p,x2,y2);
         game.drawBoard();
 
     }
