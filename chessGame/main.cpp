@@ -3,7 +3,9 @@
 #include "pieceClasses.hpp"
 
 Game game;
-char board[8][8] = {};
+char boardDraw[8][8] = {};
+piece* board[8][8] = {};
+
 
 int main()
 {
