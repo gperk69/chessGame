@@ -16,3 +16,17 @@ piece::piece(char x, char y, bool white, char t)
 	posY = y;
     type = t;
 }
+
+char piece::getPosX()
+{
+    return posX;
+}
+char piece::getPosY()
+{
+    return posY;
+}
+void piece::setPos(char x, char y)
+{
+    this->posX = x;
+    this->posY = y;
+}

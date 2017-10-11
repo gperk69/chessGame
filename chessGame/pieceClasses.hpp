@@ -17,21 +17,24 @@ class piece
 public:
     piece(char,char,bool,char);
     bool onboard = true;
-    char posX = -1;
-    char posY = -1;
+    void setPos(char,char);
+    char getPosX();
+    char getPosY();
     char type;
 
 protected:
     
     
 private:
+    char posX = -1;
+    char posY = -1;
+
 };
 
 class king:public piece
 {
 public:
     using piece::piece;
-    
 };
 
 class queen:public piece
