@@ -6,7 +6,6 @@ extern char boardVisuals[8][8];
 extern piece* board[8][8];
 
 
-
 //game start script
 void Game::startGame()
 {

@@ -27,7 +27,6 @@ int main()
         char x2 = '0' + (endCoordinate[0] - 'a');
         char y2 = '7' - (endCoordinate[1] - '1');
         
-        
 
         piece* p = game.getPiece(x1,y1);
         game.movePiece(p,x2,y2);

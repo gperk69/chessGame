@@ -7,6 +7,7 @@
 
 
 
+
 //information needed for a game to happen
 struct Game
 {

@@ -12,6 +12,8 @@
 #include <stdio.h>
 
 
+
+
 class piece
 {
 public:
@@ -21,20 +23,22 @@ public:
     char getPosX();
     char getPosY();
     char type;
+    bool isWhite;
 
 protected:
-    
-    
-private:
     char posX = -1;
     char posY = -1;
 
+    
+private:
+    
 };
 
 class king:public piece
 {
 public:
     using piece::piece;
+    bool isValidKingMove(char,char,bool);
 };
 
 class queen:public piece
